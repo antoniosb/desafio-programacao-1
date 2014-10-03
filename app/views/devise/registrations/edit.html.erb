@@ -1,0 +1,51 @@
+<div class="col-md-6 col-md-offset-3 panel well signin panel-default">
+  <div class="panel-body">
+    <h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        
+        <div class="input-group">
+          <span title='Your Email' class="input-group-addon">@</span>
+          <%= f.text_field :email, class:'form-control', placeholder: 'Your email' %>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div class="input-group">
+            <span class="input-group-addon glyphicon glyphicon-warning-sign"></span>
+              <span>Currently waiting confirmation for: <%= resource.unconfirmed_email %></span>
+          </div>
+        <% end %>
+
+        <div class="input-group">
+          <span tile='Your New Password' class="input-group-addon glyphicon glyphicon-lock"></span>
+          <%= f.password_field :password, class:'form-control', placeholder: 'Pick a new password' %>
+        </div>
+
+        <div class="input-group">
+          <span title='Your New Password Again' class="input-group-addon">&nbsp;&nbsp;&nbsp;</span>
+          <%= f.password_field :password_confirmation, class:'form-control', placeholder: 'Confirm new password ' %>
+        </div>
+
+        <div class="input-group" id="edit_current_password">
+          <span title='Your Old Password' class="input-group-addon glyphicon glyphicon-info-sign"></span>
+          <%= f.password_field :current_password, class:'form-control', placeholder: 'Current password ' %>
+          &nbsp;<i>(we need your current password to confirm your changes)</i>
+        </div>
+        </br>
+
+        <div class="input-group">
+          <span title='Update Your Account' class="input-group-addon glyphicon glyphicon-refresh"></span>
+          <%= f.submit "Update Account", class:'form-control btn btn-primary' %>
+        </div>
+      <% end %>
+
+    <h4>Cancel my account</h4>
+    <div class='input-group'>
+
+      <span title='Delete this account' class='input-group-addon glyphicon glyphicon-remove-sign'></span>
+      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:'form-control btn btn-danger btn-sm' %>
+    </div>
+    <h2><span class='btn btn-default btn-lg pull-right'><%= link_to "Back", :back %></span></h2>
+  </div>
+    
+</div>
