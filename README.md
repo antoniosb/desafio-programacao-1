@@ -11,9 +11,9 @@ This application goal is to provide a form which the user will provide a file wi
 Configuration Step  
 -------------------
 
-0.1. - Make sure you have `Ruby 2.0.0` or above installed.
-0.2.- Make sure you have a `MySQL / MariaDB` instance running.
-0.3. - This application assumes a standard instalation of ` MySQL / MariaDB ` so it is configured for a `root` user with `blank password`. If your database instance has another `user / password / host` please configure it at: `config/database.yml`  
+* Make sure you have `Ruby 2.0.0` or above installed.
+* Make sure you have a `MySQL / MariaDB` instance running.
+* This application assumes a standard instalation of ` MySQL / MariaDB ` so it is configured for a `root` user with `blank password`. If your database instance has another `user / password / host` please configure it at: `config/database.yml`  
 
 
 1. Clone this repository: `git clone git@github.com:antoniosb/desafio-programacao-1.git`
@@ -22,3 +22,5 @@ Configuration Step
 4. Run the application with `rails server`  
   
 5. You can run the specs with: `rspec spec` 
+
+Any issues, doubts, questions ping me at `antonioabritto@gmail.com`
