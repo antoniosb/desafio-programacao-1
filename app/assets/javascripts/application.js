@@ -13,13 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery.remotipart
 //= require_tree .
 
 $(document).ready(function() {
-  $('.close').click(function() {
-    $('.alert').fadeOut(1000);
-  });
-
   $('#flash_notice, #flash_info, #flash_warning, #flash_error').fadeOut(3000);
-
 });

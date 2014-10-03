@@ -7,7 +7,7 @@
       <h5 class='text-right home_ops_font'>I know you've already got a file full of the sales data of the company.</h5>
       
       <div class='well home_ops_font'>
-        <%= form_tag({action: "parse_input_file"}, multipart: true, method: "post") do |f| %>
+        <%= form_tag({action: "parse_input_file"}, remote: true, multipart: true, method: "post") do |f| %>
           
           <div class='input-group input-group-lg'>
             <span class=' input-group-addon glyphicon glyphicon-cloud-upload'></span>
@@ -19,8 +19,12 @@
         <% end %>
       </div>
 
+      <p id='index_text'></p>
 
-      <p class="text-primary text-center home_ops_font" id="index_text">  
+      <div id="revenue-well">
+        <h1 id="revenue"></h1>  
+      </div>
+      <p class="text-primary text-center home_ops_font">  
         I'm gonna take your file, parse your data and insert it on our database, don't worry! &nbsp;<span class='glyphicon glyphicon-thumbs-up'></span>
       </p>
 

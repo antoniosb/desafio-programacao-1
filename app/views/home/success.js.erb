@@ -1,0 +1,3 @@
+$('#index_text').text('<%= escape_javascript(@message).html_safe %>').removeClass().addClass('text-info text-center home_ops_font');
+$('#revenue').text('Total of gross revenue:<%= @revenue %>').removeClass().addClass('label label-primary home_ops_font');
+$('#revenue-well').removeClass().addClass('text-center');
